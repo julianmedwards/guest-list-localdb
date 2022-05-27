@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>My Event</h1>
+  </header>
+  <main>
+    <form id="signup">
+      <div>
+        <label for="fname">First Name: </label>
+        <input id="fname" type="text" name="fname" required autofocus />
+      </div>
+      <div>
+        <label for="lname">Last Name: </label>
+        <input id="lname" type="text" name="lname" required />
+      </div>
+      <div>
+        <label for="email">Email: </label>
+        <input id="email" type="email" name="email" required />
+      </div>
+      <div>
+        <label for="notes">Notes: </label>
+        <textarea id="notes" name="notes" rows="3"></textarea>
+      </div>
+      <div>
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+    <aside id="guest-list">
+      <h2>Guest List</h2>
+      <ul id="guests"></ul>
+    </aside>
+  </main>
+  <script src="db.js"></script>
+  <script>
+    document.querySelector('#signup').addEventListener('submit', add)
+  </script>
+</body>
